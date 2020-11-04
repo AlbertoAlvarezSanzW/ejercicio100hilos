@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ClasePrincipal implements Callback {
 
     final int MAX = 100;
-    hilos[] hilos = new hilos[MAX];
+    hilos[] Hilos = new hilos[MAX];
     ArrayList <String> lista = new ArrayList<String>();
 
     public ClasePrincipal(){
@@ -17,12 +17,12 @@ public class ClasePrincipal implements Callback {
 
             for (j = 0; j<MAX;j++){
                 hilos hilo = new hilos(this);
-                hilo.setName("El hilo:"+j);
+                hilo.setName("El Hilo:"+j);
                 hilo.start();
-                hilos[j] = hilo;
+                Hilos[j] = hilo;
             }
 
-            for(hilos x:hilos){
+            for(hilos x:Hilos){
                 try{
                     x.join();
                 }catch (InterruptedException e){
